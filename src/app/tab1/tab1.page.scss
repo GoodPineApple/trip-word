@@ -1,4 +1,16 @@
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
+
+ion-fab{
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  height: 95%;
+}
+
+button{
+  background:#fff;
+  width:50%;
+}
+
+button ion-icon{ 
+  font-size: 90px;
 }

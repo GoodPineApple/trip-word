@@ -9,4 +9,12 @@ export class Tab1Page {
 
   constructor() {}
 
+
+  click(){
+    
+  }
+
+
+
+
 }
