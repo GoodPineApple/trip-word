@@ -11,39 +11,49 @@ const routes: Routes = [
         path: 'mycard',
         children: [
           {
-            path: 'mycard',
+            path: 'menu-list',
             loadChildren: () =>
-              import('../page/mycard/mycard.module').then(m => m.MycardPageModule)
-          }
-        ]
-      },
-      // {
-      //   path: 'category',
-      //   children: [
-      //     {
-      //       path: 'category',
-      //       loadChildren: () =>
-      //         import('../page/category/category.module').then(m => m.CategoryPageModule)
-      //     }
-      //   ]
-      // },
-      {
-        path: 'tab1',
-        children: [
+              import('../page/mycard/mycard-menu-list/mycard-menu-list.module').then(m => m.MycardMenuListPageModule)
+          },
+          {
+            path: 'word-list',
+            loadChildren: () =>
+              import('../page/mycard/mycard-word-list/mycard-word-list.module').then(m => m.MycardWordListPageModule)
+          },
+          {
+            path: 'word-view',
+            loadChildren: () =>
+              import('../page/mycard/mycard-word-view/mycard-word-view.module').then(m => m.MycardWordViewPageModule)
+          },
           {
             path: '',
-            loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+            redirectTo: '/tabs/mycard/menu-list',
+            pathMatch: 'full'
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'category',
         children: [
           {
-            path: '',
+            path: 'menu-list',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../page/category/category-menu-list/category-menu-list.module').then(m => m.CategoryMenuListPageModule)
+          },
+          {
+            path: 'word-list',
+            loadChildren: () =>
+              import('../page/category/category-word-list/category-word-list.module').then(m => m.CategoryWordListPageModule)
+          },
+          {
+            path: 'word-view',
+            loadChildren: () =>
+              import('../page/category/category-word-view/category-word-view.module').then(m => m.CategoryWordViewPageModule)
+          },
+          {
+            path: '',
+            redirectTo: '/tabs/category/menu-list',
+            pathMatch: 'full'
           }
         ]
       },
@@ -57,16 +67,16 @@ const routes: Routes = [
           }
         ]
       },
-      {
-        path: '',
-        redirectTo: '/tabs/mycard/category-list',
-        pathMatch: 'full'
-      }
+      // {
+      //   path: '',
+      //   redirectTo: '/tabs/mycard/category-list',
+      //   pathMatch: 'full'
+      // }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/mycard/category-list',
+    redirectTo: '/tabs/mycard/menu-list',
     pathMatch: 'full'
   }
 ];

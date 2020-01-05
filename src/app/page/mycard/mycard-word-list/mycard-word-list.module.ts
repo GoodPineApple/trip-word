@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CategoryListPageRoutingModule } from './category-list-routing.module';
+import { MycardWordListPageRoutingModule } from './mycard-word-list-routing.module';
 
-import { CategoryListPage } from './category-list.page';
+import { MycardWordListPage } from './mycard-word-list.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CategoryListPageRoutingModule
+    MycardWordListPageRoutingModule
   ],
-  declarations: [CategoryListPage]
+  declarations: [MycardWordListPage]
 })
-export class CategoryListPageModule {}
+export class MycardWordListPageModule {}
