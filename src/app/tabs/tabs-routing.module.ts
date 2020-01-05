@@ -8,6 +8,26 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
+        path: 'mycard',
+        children: [
+          {
+            path: 'mycard',
+            loadChildren: () =>
+              import('../page/mycard/mycard.module').then(m => m.MycardPageModule)
+          }
+        ]
+      },
+      // {
+      //   path: 'category',
+      //   children: [
+      //     {
+      //       path: 'category',
+      //       loadChildren: () =>
+      //         import('../page/category/category.module').then(m => m.CategoryPageModule)
+      //     }
+      //   ]
+      // },
+      {
         path: 'tab1',
         children: [
           {
@@ -39,14 +59,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/mycard/category-list',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/mycard/category-list',
     pathMatch: 'full'
   }
 ];
