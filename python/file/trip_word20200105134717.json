@@ -1,0 +1,898 @@
+{
+	"BASIC": {
+		"X9RzgWtof4QVc2vd4WRv": {
+			"id": "X9RzgWtof4QVc2vd4WRv",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "나",
+			"chinese": "我",
+			"pronun-ch": "Wǒ",
+			"pronun-kr": "워"
+		},
+		"CqgB6iBB0TwrKFQTePiY": {
+			"id": "CqgB6iBB0TwrKFQTePiY",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "너",
+			"chinese": "你",
+			"pronun-ch": "Nǐ",
+			"pronun-kr": "니"
+		},
+		"Pv6tTIB9L5UdXvJVnjLF": {
+			"id": "Pv6tTIB9L5UdXvJVnjLF",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "우리",
+			"chinese": "我们",
+			"pronun-ch": "Wǒmen",
+			"pronun-kr": "워먼"
+		},
+		"XOt2qIYK6y1An60LZaBL": {
+			"id": "XOt2qIYK6y1An60LZaBL",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "여자를 부를 때 (아가씨)",
+			"chinese": "小姐",
+			"pronun-ch": "Xiǎojiě",
+			"pronun-kr": "샤오지에"
+		},
+		"tRXYnwXSTxVZgGdF0Zfp": {
+			"id": "tRXYnwXSTxVZgGdF0Zfp",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "남자를 부를 때",
+			"chinese": "先生",
+			"pronun-ch": "Xiānshēng",
+			"pronun-kr": "씨엔 셩"
+		},
+		"H8WCVJ3Dg5ugeGkGJKDE": {
+			"id": "H8WCVJ3Dg5ugeGkGJKDE",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "안녕하세요",
+			"chinese": "您好",
+			"pronun-ch": "Nín hǎo",
+			"pronun-kr": "닌하오"
+		},
+		"C5tVxxv4xAEblaf9lEN6": {
+			"id": "C5tVxxv4xAEblaf9lEN6",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "안녕히 계세요",
+			"chinese": "再见",
+			"pronun-ch": "Zàijiàn",
+			"pronun-kr": "짜이 지엔"
+		},
+		"vzG1f0uFoegvaxLi7Dxb": {
+			"id": "vzG1f0uFoegvaxLi7Dxb",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "고맙습니다.",
+			"chinese": "谢谢",
+			"pronun-ch": "Xièxiè",
+			"pronun-kr": "씨에씨에"
+		},
+		"3NLNdRMuTeR70aCg1otw": {
+			"id": "3NLNdRMuTeR70aCg1otw",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "죄송합니다.",
+			"chinese": "不好意思",
+			"pronun-ch": "Bù hǎoyìsi",
+			"pronun-kr": "뿌하오이쓰"
+		},
+		"qbprJu5djAHemlYAC01q": {
+			"id": "qbprJu5djAHemlYAC01q",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "이름이 뭐예요?",
+			"chinese": "你叫什么名字",
+			"pronun-ch": "Nǐ jiào shénme míngzì",
+			"pronun-kr": "니 쟈오 션머 밍 쯔"
+		},
+		"Ha1jyxxyuOHxZUwuZ932": {
+			"id": "Ha1jyxxyuOHxZUwuZ932",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "내 이름은 XXX입니다.",
+			"chinese": "我叫XXX",
+			"pronun-ch": "Wǒ jiào XXX",
+			"pronun-kr": "워 지아오 XXX"
+		},
+		"4aaXMcrNpVJa6DUHW2cf": {
+			"id": "4aaXMcrNpVJa6DUHW2cf",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "네",
+			"chinese": "是",
+			"pronun-ch": "Shì",
+			"pronun-kr": "싀"
+		},
+		"0lT4jV4KtHCtG0fQp218": {
+			"id": "0lT4jV4KtHCtG0fQp218",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "아니요.",
+			"chinese": "不是",
+			"pronun-ch": "Bùshì",
+			"pronun-kr": "부싀"
+		},
+		"6SQTiXL6iy7eMpz1piBf": {
+			"id": "6SQTiXL6iy7eMpz1piBf",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "맞습니다.",
+			"chinese": "对",
+			"pronun-ch": "Duì",
+			"pronun-kr": "뚜웨이"
+		},
+		"KY67hBA1KSVIbdciT2JL": {
+			"id": "KY67hBA1KSVIbdciT2JL",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "틀립니다.",
+			"chinese": "不对",
+			"pronun-ch": "Bùduì",
+			"pronun-kr": "부 뚜웨이"
+		},
+		"AkifpIvrOSzzFinRvgBC": {
+			"id": "AkifpIvrOSzzFinRvgBC",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "좋습니다.",
+			"chinese": "好的",
+			"pronun-ch": "Hǎo de",
+			"pronun-kr": "하오더"
+		},
+		"iwzMkOFS3w8anwm5XFs9": {
+			"id": "iwzMkOFS3w8anwm5XFs9",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "도와주세요.",
+			"chinese": "请您帮帮我",
+			"pronun-ch": "Qǐng nín bāng bāng wǒ",
+			"pronun-kr": "칭 닌 빵빵 워"
+		},
+		"1G8JzxtCZSboVkYWjlni": {
+			"id": "1G8JzxtCZSboVkYWjlni",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "말씀 좀 여쭐게요.",
+			"chinese": "请问一下",
+			"pronun-ch": "Qǐngwèn yīxià",
+			"pronun-kr": "칭웬 이 시아"
+		},
+		"8K0Obqrr2YgJICmOoszS": {
+			"id": "8K0Obqrr2YgJICmOoszS",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "잘 모르겠어요",
+			"chinese": "我不知道",
+			"pronun-ch": "Wǒ bù zhīdào",
+			"pronun-kr": "워 뿌 쥐다오"
+		},
+		"VvxzdTeFjlZBi3BtnT4n": {
+			"id": "VvxzdTeFjlZBi3BtnT4n",
+			"category-code": "BASIC",
+			"category-name": "기초회화",
+			"korean": "잠깐만요.",
+			"chinese": "等等",
+			"pronun-ch": "Děng děng",
+			"pronun-kr": "덩덩"
+		}
+	},
+	"NUMTIME": {
+		"Zt8yqMbsd4lOF5RqQIWy": {
+			"id": "Zt8yqMbsd4lOF5RqQIWy",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "0",
+			"chinese": "零",
+			"pronun-ch": "Líng",
+			"pronun-kr": "링"
+		},
+		"pbKI1vkbTotlNhou2vCm": {
+			"id": "pbKI1vkbTotlNhou2vCm",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "1",
+			"chinese": "一",
+			"pronun-ch": "Yī",
+			"pronun-kr": "이"
+		},
+		"qFkmGwe1lNzLIfQHIRkz": {
+			"id": "qFkmGwe1lNzLIfQHIRkz",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "2",
+			"chinese": "二",
+			"pronun-ch": "(Èr)",
+			"pronun-kr": "알"
+		},
+		"HMWoY5lWARElVR3egrbf": {
+			"id": "HMWoY5lWARElVR3egrbf",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "3",
+			"chinese": "三",
+			"pronun-ch": "(Sān)",
+			"pronun-kr": "싼"
+		},
+		"yo9rOHj5sCrwAUcLklL4": {
+			"id": "yo9rOHj5sCrwAUcLklL4",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "4",
+			"chinese": "四",
+			"pronun-ch": "Sì)",
+			"pronun-kr": "쓰"
+		},
+		"u7i7n1dJrN0df47BSOqa": {
+			"id": "u7i7n1dJrN0df47BSOqa",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "5",
+			"chinese": "五",
+			"pronun-ch": "Wǔ",
+			"pronun-kr": "우"
+		},
+		"hc2UgnztJBcFMvs3EWSd": {
+			"id": "hc2UgnztJBcFMvs3EWSd",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "6",
+			"chinese": "六",
+			"pronun-ch": "Liù",
+			"pronun-kr": "리어우"
+		},
+		"Dwna6PKa0vXhby1cP2Js": {
+			"id": "Dwna6PKa0vXhby1cP2Js",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "7",
+			"chinese": "七",
+			"pronun-ch": "Qī",
+			"pronun-kr": "치"
+		},
+		"Af7wedCTl3dszaGhiqyM": {
+			"id": "Af7wedCTl3dszaGhiqyM",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "8",
+			"chinese": "八",
+			"pronun-ch": "Bā",
+			"pronun-kr": "빠"
+		},
+		"oajgf3VygL0LYzIwZ0Bj": {
+			"id": "oajgf3VygL0LYzIwZ0Bj",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "9",
+			"chinese": "九",
+			"pronun-ch": "Jiǔ",
+			"pronun-kr": "지어우"
+		},
+		"WwDMouYmtclRhh6oIITp": {
+			"id": "WwDMouYmtclRhh6oIITp",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "10",
+			"chinese": "十",
+			"pronun-ch": "Shí",
+			"pronun-kr": "싀"
+		},
+		"nriWdJmBoQAMKVy3kjR4": {
+			"id": "nriWdJmBoQAMKVy3kjR4",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "11",
+			"chinese": "十一",
+			"pronun-ch": "Shíyī",
+			"pronun-kr": "싀이"
+		},
+		"FM3dqKAbsZMBi7A08LKb": {
+			"id": "FM3dqKAbsZMBi7A08LKb",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "12",
+			"chinese": "十二",
+			"pronun-ch": "Shí'èr",
+			"pronun-kr": "싀알"
+		},
+		"JipzUtCmNxHyIWuFJaq0": {
+			"id": "JipzUtCmNxHyIWuFJaq0",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "20",
+			"chinese": "二十",
+			"pronun-ch": "Èrshí",
+			"pronun-kr": "알싀"
+		},
+		"9Vgl5z0PX7nMowNxwY6R": {
+			"id": "9Vgl5z0PX7nMowNxwY6R",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "30",
+			"chinese": "三十",
+			"pronun-ch": "Sānshí",
+			"pronun-kr": "싼싀"
+		},
+		"9DUJi7oKvLeOGcVF8Gza": {
+			"id": "9DUJi7oKvLeOGcVF8Gza",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "100",
+			"chinese": "一百",
+			"pronun-ch": "Yībǎi",
+			"pronun-kr": "이바이"
+		},
+		"ZCL4DxcdRKntf2GkjPO2": {
+			"id": "ZCL4DxcdRKntf2GkjPO2",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "1000",
+			"chinese": "一千",
+			"pronun-ch": "Yīqiān",
+			"pronun-kr": "이치엔"
+		},
+		"fKR4DWa1cy5mR7kfPvwf": {
+			"id": "fKR4DWa1cy5mR7kfPvwf",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "10000",
+			"chinese": "一万",
+			"pronun-ch": "Yī wàn",
+			"pronun-kr": "이완"
+		},
+		"uDos3aj3l3EpP47M3eBG": {
+			"id": "uDos3aj3l3EpP47M3eBG",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "한개",
+			"chinese": "一个",
+			"pronun-ch": "Yīgè",
+			"pronun-kr": "이끄어"
+		},
+		"RefWudi5jgTsUEtBrZ33": {
+			"id": "RefWudi5jgTsUEtBrZ33",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "세개",
+			"chinese": "三个",
+			"pronun-ch": "Sān gè",
+			"pronun-kr": "싼끄어"
+		},
+		"dfKYRvFH4BBUmdKIXloW": {
+			"id": "dfKYRvFH4BBUmdKIXloW",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "이틀",
+			"chinese": "两天",
+			"pronun-ch": "Liǎng tiān",
+			"pronun-kr": "량티엔"
+		},
+		"m1LqkTwezEP2AvWsti3Z": {
+			"id": "m1LqkTwezEP2AvWsti3Z",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "5일",
+			"chinese": "五天",
+			"pronun-ch": "Wǔ tiān",
+			"pronun-kr": "우티엔"
+		},
+		"rHPpR5pz2qZIfRYDCzBc": {
+			"id": "rHPpR5pz2qZIfRYDCzBc",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "일주일",
+			"chinese": "一个星期",
+			"pronun-ch": "Yīgè xīngqí",
+			"pronun-kr": "이끄어 씽치"
+		},
+		"XU2ZQZ2MrAdLdYxYE67H": {
+			"id": "XU2ZQZ2MrAdLdYxYE67H",
+			"category-code": "NUMTIME",
+			"category-name": "숫자/날짜",
+			"korean": "10일",
+			"chinese": "十天",
+			"pronun-ch": "Shí tiān",
+			"pronun-kr": "스티엔"
+		}
+	},
+	"TRAFFIC": {
+		"7k9z5YoN2XQZbqFGR8Zj": {
+			"id": "7k9z5YoN2XQZbqFGR8Zj",
+			"category-code": "TRAFFIC",
+			"category-name": "교통",
+			"korean": "전철역이 어디에요?",
+			"chinese": "地铁站站哪儿",
+			"pronun-ch": "Zuìjìn dì dìtiě zhàn",
+			"pronun-kr": "디티에 짠 짠 날"
+		},
+		"RySW23oao619z5nHVKwk": {
+			"id": "RySW23oao619z5nHVKwk",
+			"category-code": "TRAFFIC",
+			"category-name": "교통",
+			"korean": "버스정류장은 어디에요?",
+			"chinese": "公共汽车站哪儿",
+			"pronun-ch": "Gōnggòng qìchē zhàn nà'er",
+			"pronun-kr": "꽁공 츼처 짠 날"
+		},
+		"H1VKFwFVva5XSRY1kFsJ": {
+			"id": "H1VKFwFVva5XSRY1kFsJ",
+			"category-code": "TRAFFIC",
+			"category-name": "교통",
+			"korean": "표는 어디에서 사나요?",
+			"chinese": "在什么地方买票",
+			"pronun-ch": "Zài shénme dìfāng mǎi piào",
+			"pronun-kr": "짜이 션머 띠팡 마이 피아오"
+		},
+		"mKstb7NBVM5XVzGwcpDz": {
+			"id": "mKstb7NBVM5XVzGwcpDz",
+			"category-code": "TRAFFIC",
+			"category-name": "교통",
+			"korean": "차를 세워 주세요.",
+			"chinese": "请停车",
+			"pronun-ch": "Qǐng tíngchē",
+			"pronun-kr": "칭 팅 츠어"
+		},
+		"gUtjYJeqmeRj8nd417A7": {
+			"id": "gUtjYJeqmeRj8nd417A7",
+			"category-code": "TRAFFIC",
+			"category-name": "교통",
+			"korean": "~까지 가는 데 얼마에요 ?",
+			"chinese": "到(장소)多少钱？",
+			"pronun-ch": "dào duōshǎo qián ?",
+			"pronun-kr": "따오~뚜어샤오 치앤?"
+		},
+		"vkpTSMAEf8XKRiEK4jdg": {
+			"id": "vkpTSMAEf8XKRiEK4jdg",
+			"category-code": "TRAFFIC",
+			"category-name": "교통",
+			"korean": "~까지 가는 데 얼마나 걸리나요 ?",
+			"chinese": "到(장소)需要多长时间？",
+			"pronun-ch": "dào xūyào duō cháng shíjiān?",
+			"pronun-kr": "따오~씌야오 뚜어창씌찌앤?"
+		},
+		"LPH2xmQwYeN5uF6xAdPp": {
+			"id": "LPH2xmQwYeN5uF6xAdPp",
+			"category-code": "TRAFFIC",
+			"category-name": "교통",
+			"korean": "트렁크 좀 열어주세요",
+			"chinese": "请把备箱打开一下",
+			"pronun-ch": "qǐng bǎ bèixiāng dǎkāi yíxià",
+			"pronun-kr": "칭빠 뻬이씨앙 다카이 이씨아"
+		}
+	},
+	"SHOPPING": {
+		"LQRBFOrAmZAdgQfRVxK4": {
+			"id": "LQRBFOrAmZAdgQfRVxK4",
+			"category-code": "SHOPPING",
+			"category-name": "쇼핑",
+			"korean": "얼마예요?",
+			"chinese": "这个多少钱",
+			"pronun-ch": "Zhège duōshǎo qián",
+			"pronun-kr": ""
+		},
+		"I8ARh59HOZfBVGTR1hwz": {
+			"id": "I8ARh59HOZfBVGTR1hwz",
+			"category-code": "SHOPPING",
+			"category-name": "쇼핑",
+			"korean": "계산을 부탁합니다.",
+			"chinese": "请结张",
+			"pronun-ch": "Qǐng jié zhāng",
+			"pronun-kr": ""
+		},
+		"2J9an1Pc23viGrDeK78F": {
+			"id": "2J9an1Pc23viGrDeK78F",
+			"category-code": "SHOPPING",
+			"category-name": "쇼핑",
+			"korean": "신용카드 됩니까?",
+			"chinese": "刷卡可以吗",
+			"pronun-ch": "Shuākǎ kěyǐ ma",
+			"pronun-kr": "수아 카 커이 마"
+		},
+		"FG7gAaPMUlhFciQClOml": {
+			"id": "FG7gAaPMUlhFciQClOml",
+			"category-code": "SHOPPING",
+			"category-name": "쇼핑",
+			"korean": "계산이 잘못된 것 같아요.",
+			"chinese": "好像计算错了",
+			"pronun-ch": "Hǎoxiàng jìsuàn cuòle",
+			"pronun-kr": "하오샹 지수안 츠월러"
+		},
+		"6XbxMNXSpKYokGMmTXou": {
+			"id": "6XbxMNXSpKYokGMmTXou",
+			"category-code": "SHOPPING",
+			"category-name": "쇼핑",
+			"korean": "너무 비싸요.",
+			"chinese": "太贵了",
+			"pronun-ch": "Tài guìle",
+			"pronun-kr": "타이 꾸일러"
+		},
+		"g6erp36kJWV7xj5MZAL5": {
+			"id": "g6erp36kJWV7xj5MZAL5",
+			"category-code": "SHOPPING",
+			"category-name": "쇼핑",
+			"korean": "좀 깎아 주세요",
+			"chinese": "便宜一点",
+			"pronun-ch": "Piányí yīdiǎn",
+			"pronun-kr": "피엔이 이 디엔"
+		},
+		"rwOi8BXFmZPvcbH7CPcl": {
+			"id": "rwOi8BXFmZPvcbH7CPcl",
+			"category-code": "SHOPPING",
+			"category-name": "쇼핑",
+			"korean": "필요 없습니다.",
+			"chinese": "不要",
+			"pronun-ch": "Bùyào",
+			"pronun-kr": "뿌 야오"
+		}
+	},
+	"RESTAURANT": {
+		"3BP68eiMt2LVsFZavgHg": {
+			"id": "3BP68eiMt2LVsFZavgHg",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "메뉴를 보고 싶어요.",
+			"chinese": "我要看菜单",
+			"pronun-ch": "Wǒ yào kàn càidān",
+			"pronun-kr": "워 야오 칸 차이 딴"
+		},
+		"HKEE4pHmhXErxgNUo5P8": {
+			"id": "HKEE4pHmhXErxgNUo5P8",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "주문이요.",
+			"chinese": "买单",
+			"pronun-ch": "Mǎidān",
+			"pronun-kr": "마이 딴"
+		},
+		"4Sg7jBzk9ik5exBf8oB9": {
+			"id": "4Sg7jBzk9ik5exBf8oB9",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "이것 주세요.",
+			"chinese": "请给我这个",
+			"pronun-ch": "Qǐng gěi wǒ zhège",
+			"pronun-kr": "칭 게이 워 쩌거"
+		},
+		"aujOOElORJSKBPFEpRkg": {
+			"id": "aujOOElORJSKBPFEpRkg",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "고수는 넣지 마세요.",
+			"chinese": "不要香菜",
+			"pronun-ch": "Bùyào xiāngcài",
+			"pronun-kr": "부 야오 씨앙차이"
+		},
+		"pouOyMnZ37xshMu9BrPI": {
+			"id": "pouOyMnZ37xshMu9BrPI",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "밥 좀 주세요.",
+			"chinese": "请给我米饭",
+			"pronun-ch": "Qǐng gěi wǒ mǐfàn",
+			"pronun-kr": "칭 게이 워 미 판"
+		},
+		"uONlMrvvwWa2FHplqi2b": {
+			"id": "uONlMrvvwWa2FHplqi2b",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "물 좀 주세요.",
+			"chinese": "请给我水",
+			"pronun-ch": "Qǐng gěi wǒ shuǐ",
+			"pronun-kr": "칭 게이 워 수웨이"
+		},
+		"EInUM144TwBSD60SV7Qo": {
+			"id": "EInUM144TwBSD60SV7Qo",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "맛있어요.",
+			"chinese": "好吃",
+			"pronun-ch": "Hào chī",
+			"pronun-kr": "하오 취"
+		},
+		"1cd1zHKry7KDvCBPxS95": {
+			"id": "1cd1zHKry7KDvCBPxS95",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "화장실은 어디예요?",
+			"chinese": "卫生间在哪儿",
+			"pronun-ch": "Wèishēngjiān zài nǎ'er",
+			"pronun-kr": "웨이셩 지엔 짜이 나알"
+		},
+		"faJl53E7SpbdNxnKTuVh": {
+			"id": "faJl53E7SpbdNxnKTuVh",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "추천해주세요",
+			"chinese": "给我推荐一下。",
+			"pronun-ch": "gěi wǒ tuījiàn yíxià ",
+			"pronun-kr": "게이워 투에이찌앤 이씨아"
+		},
+		"SqxMPBTVap8SDsRkjlaf": {
+			"id": "SqxMPBTVap8SDsRkjlaf",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "포장해주세요",
+			"chinese": "我要打包",
+			"pronun-ch": "wǒ yào dǎbāo",
+			"pronun-kr": "워야오 다바오"
+		},
+		"T5EgKmPRRZxDcMHF4cKB": {
+			"id": "T5EgKmPRRZxDcMHF4cKB",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "계산해주세요",
+			"chinese": "请结账",
+			"pronun-ch": "qǐng jiézhàng",
+			"pronun-kr": "칭 지에장"
+		},
+		"n8Pv6fTwiAswjrz2fETj": {
+			"id": "n8Pv6fTwiAswjrz2fETj",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "우리 요리는 언제 나오나요?",
+			"chinese": "我们的菜什么时候上",
+			"pronun-ch": "Wǒmen de cài shí me shíhòu shàng",
+			"pronun-kr": "워 먼 더 차이 션머 스 호우 샹"
+		},
+		"sJvrepfT8zgv9Y4i3Jpg": {
+			"id": "sJvrepfT8zgv9Y4i3Jpg",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "맥주를 주시겠습니까?",
+			"chinese": "请给我啤酒?",
+			"pronun-ch": "Qǐng gěi wǒ píjiǔ?",
+			"pronun-kr": "칭께워 피져우"
+		},
+		"uK3IRzplzXP7RVP4JOl3": {
+			"id": "uK3IRzplzXP7RVP4JOl3",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "물 한 잔 주세요",
+			"chinese": "请给我一杯水",
+			"pronun-ch": "Qǐng gěi wǒ yībēi shuǐ",
+			"pronun-kr": "칭 게이 워 이 뻬이 수이"
+		},
+		"pNgjAZboE4ls6OwzsVmp": {
+			"id": "pNgjAZboE4ls6OwzsVmp",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "젓가락을 떨어뜨렸습니다.",
+			"chinese": "筷子掉了。",
+			"pronun-ch": "Kuàizi diàole.",
+			"pronun-kr": ""
+		},
+		"n8vTB9VQ2wgF3fDKT3PE": {
+			"id": "n8vTB9VQ2wgF3fDKT3PE",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "신용카드도 됩니까?",
+			"chinese": "刷卡可以吗",
+			"pronun-ch": "Shuākǎ kěyǐ ma",
+			"pronun-kr": "수아카 커이마"
+		},
+		"oXxDSr8BNaFKDfH4CV7o": {
+			"id": "oXxDSr8BNaFKDfH4CV7o",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "어떤 요리가 좋습니까?",
+			"chinese": "有什么好菜",
+			"pronun-ch": "Yǒu shé me hǎo cài",
+			"pronun-kr": "이요우 션머 하오차이"
+		},
+		"4qAdcHBoWcbzCoaPAMlq": {
+			"id": "4qAdcHBoWcbzCoaPAMlq",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "맥주를 1 병 더 주십시오",
+			"chinese": "还要一瓶啤酒",
+			"pronun-ch": "Hái yào yī píng píjiǔ",
+			"pronun-kr": "하이 야오 이핑 피지우"
+		},
+		"u9g6nSISDoav93C0BWLA": {
+			"id": "u9g6nSISDoav93C0BWLA",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "차가운 물 좀 주세요.",
+			"chinese": "请给我冰镇的矿泉水",
+			"pronun-ch": "Qǐng gěi wǒ bīng zhèn de kuàng quán shuǐ",
+			"pronun-kr": "칭게이워 삥쩐더 쾅췐쉐이"
+		},
+		"L46h8ig95ijX7ffR3TQV": {
+			"id": "L46h8ig95ijX7ffR3TQV",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "밥",
+			"chinese": "米饭",
+			"pronun-ch": "Mǐfàn",
+			"pronun-kr": "미 판"
+		},
+		"3K9oAiWziSQd6yAFZb1d": {
+			"id": "3K9oAiWziSQd6yAFZb1d",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "국",
+			"chinese": "汤",
+			"pronun-ch": "Tāng",
+			"pronun-kr": "탕"
+		},
+		"x6LTS2ODu0BQwwC1Nlgg": {
+			"id": "x6LTS2ODu0BQwwC1Nlgg",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "볶음밥",
+			"chinese": "炒饭",
+			"pronun-ch": "Chǎofàn",
+			"pronun-kr": "차오 판"
+		},
+		"1OUpqXIE5bd8HfcFPL7t": {
+			"id": "1OUpqXIE5bd8HfcFPL7t",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "볶음면",
+			"chinese": "炒面",
+			"pronun-ch": "Chǎomiàn",
+			"pronun-kr": "차오 미엔"
+		},
+		"N0DWGXXg9McD3myV3vdR": {
+			"id": "N0DWGXXg9McD3myV3vdR",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "국수",
+			"chinese": "面条",
+			"pronun-ch": "Miàntiáo",
+			"pronun-kr": "미엔 티아오"
+		},
+		"BnJKEEMmWsgBbUEko5Bd": {
+			"id": "BnJKEEMmWsgBbUEko5Bd",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "만두",
+			"chinese": "包子",
+			"pronun-ch": "Bāozi",
+			"pronun-kr": "바오 쯔"
+		},
+		"PoZOv5VQU9Kaw7IRFlK2": {
+			"id": "PoZOv5VQU9Kaw7IRFlK2",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "빵",
+			"chinese": "面包",
+			"pronun-ch": "Miànbāo",
+			"pronun-kr": "미엔 빠오"
+		},
+		"b4y2za2h0zuJVc1XH8Vp": {
+			"id": "b4y2za2h0zuJVc1XH8Vp",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "돼지고기",
+			"chinese": "猪肉",
+			"pronun-ch": "Zhūròu",
+			"pronun-kr": "쭈 로우"
+		},
+		"RU9EJTxdGkcOWCJB6I1F": {
+			"id": "RU9EJTxdGkcOWCJB6I1F",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "소고기",
+			"chinese": "牛肉",
+			"pronun-ch": "Niúròu",
+			"pronun-kr": "니여우 로우"
+		},
+		"GKDX8fQMEiKKQ429iSAM": {
+			"id": "GKDX8fQMEiKKQ429iSAM",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "닭고기",
+			"chinese": "鸡肉",
+			"pronun-ch": "Jīròu",
+			"pronun-kr": "지 로우"
+		},
+		"00WW7UpHxzMLwHTQKjDm": {
+			"id": "00WW7UpHxzMLwHTQKjDm",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "양고기",
+			"chinese": "羊肉",
+			"pronun-ch": "Yángròu",
+			"pronun-kr": "양 로우"
+		},
+		"WYY0u8WlTzU3QMhyiTAy": {
+			"id": "WYY0u8WlTzU3QMhyiTAy",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "숟가락",
+			"chinese": "汤匙",
+			"pronun-ch": "Tāngchí",
+			"pronun-kr": "탕 취"
+		},
+		"pMQx8rvoFOdpBWS66Lda": {
+			"id": "pMQx8rvoFOdpBWS66Lda",
+			"category-code": "RESTAURANT",
+			"category-name": "식당",
+			"korean": "젓가락",
+			"chinese": "筷子",
+			"pronun-ch": "Kuàizi",
+			"pronun-kr": "콰이 쯔"
+		}
+	},
+	"HOTEL": {
+		"ckYYSBO20aEdI2gW2rLQ": {
+			"id": "ckYYSBO20aEdI2gW2rLQ",
+			"category-code": "HOTEL",
+			"category-name": "호텔",
+			"korean": "더운 물이 나오지 않습니다.",
+			"chinese": "不出热水",
+			"pronun-ch": "Bù chū rè shuǐ",
+			"pronun-kr": "뿌 추러 쉐이"
+		},
+		"A2DIhn8LFaCk0lePnfo5": {
+			"id": "A2DIhn8LFaCk0lePnfo5",
+			"category-code": "HOTEL",
+			"category-name": "호텔",
+			"korean": "에어콘이 작동되지 않습니다.",
+			"chinese": "空调坏了",
+			"pronun-ch": "Kòngtiáo huàile",
+			"pronun-kr": "쿵 티아오 파일 러"
+		},
+		"ynbBJxedQxKlE5MlkPyD": {
+			"id": "ynbBJxedQxKlE5MlkPyD",
+			"category-code": "HOTEL",
+			"category-name": "호텔",
+			"korean": "수건을 바꿔주세요.",
+			"chinese": "请给我一些毛巾",
+			"pronun-ch": "Qǐng bāng wǒ huàn máojīn",
+			"pronun-kr": "칭빵워 환 마오진"
+		},
+		"ImuNpGJkaEt8fCUbatvt": {
+			"id": "ImuNpGJkaEt8fCUbatvt",
+			"category-code": "HOTEL",
+			"category-name": "호텔",
+			"korean": "방을 바꿔주세요.",
+			"chinese": "请给我换房间",
+			"pronun-ch": "Qǐng gěi wǒ huàn fángjiān",
+			"pronun-kr": "칭게이워 환 팡지엔"
+		},
+		"UjVQITMnUCr83anxiWyS": {
+			"id": "UjVQITMnUCr83anxiWyS",
+			"category-code": "HOTEL",
+			"category-name": "호텔",
+			"korean": "체크아웃하겠습니다.",
+			"chinese": "请给我退房",
+			"pronun-ch": "Qǐng gěi wǒ tuì fáng",
+			"pronun-kr": "칭게이워 투이팡"
+		},
+		"RvWLpljXNnvmnQdov3QA": {
+			"id": "RvWLpljXNnvmnQdov3QA",
+			"category-code": "HOTEL",
+			"category-name": "호텔",
+			"korean": "체크인 부탁합니다.",
+			"chinese": "请给我开个房间",
+			"pronun-ch": "Qǐng gěi wǒ kāi gè fángjiān",
+			"pronun-kr": "칭게이워 카이거 팡지엔"
+		},
+		"fUxooU3NUV35MWniTid2": {
+			"id": "fUxooU3NUV35MWniTid2",
+			"category-code": "HOTEL",
+			"category-name": "호텔",
+			"korean": "예약했습니다.",
+			"chinese": "预约了",
+			"pronun-ch": "Yùyuēle",
+			"pronun-kr": "위위에러"
+		}
+	},
+	"EMERGENCY": {
+		"CbhNSun1mOwN0GkpEKI5": {
+			"id": "CbhNSun1mOwN0GkpEKI5",
+			"category-code": "EMERGENCY",
+			"category-name": "비상시",
+			"korean": "길을 잃었습니다",
+			"chinese": "我迷路了",
+			"pronun-ch": "Wǒ mílùle",
+			"pronun-kr": "워미루러"
+		}
+	}
+}
