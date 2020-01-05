@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+// import myData from '../../assets/python/file/trip_word20200105134717.json';
 
 @Component({
   selector: 'app-category-menu-list',
@@ -7,9 +12,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryMenuListPage implements OnInit {
 
-  constructor() { }
+
+  category_list : Object[] = [
+    {
+      category_name : "음식",
+      category_url : "assets/img/category/test.jpg"
+    },
+    {
+      category_name : "여행",
+      category_url : "assets/img/category/test.jpg"
+    },
+    {
+      category_name : "가",
+      category_url : "assets/img/category/test.jpg"
+    },
+    {
+      category_name : "나",
+      category_url : "assets/img/category/test.jpg"
+    }
+  ]
+
+  constructor(private http: Http ) { }
 
   ngOnInit() {
+    this.getData();
   }
 
+
+  getData() {
+      this.http.get('assets/python/file/trip_word20200105134717.json').map(res => res.json()).subscribe(res => {
+            this.data = res.menuItems;
+            console.log(this.data);
+          },
+          (err) => {
+            alert('failed loading json data');
+          });
+    }
 }
