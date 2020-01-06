@@ -35,17 +35,7 @@ export class CategoryMenuListPage implements OnInit {
   constructor(private http: Http ) { }
 
   ngOnInit() {
-    this.getData();
+    
   }
 
-
-  getData() {
-      this.http.get('assets/python/file/trip_word20200105134717.json').map(res => res.json()).subscribe(res => {
-            this.data = res.menuItems;
-            console.log(this.data);
-          },
-          (err) => {
-            alert('failed loading json data');
-          });
-    }
 }
