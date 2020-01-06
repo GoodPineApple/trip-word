@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+// import { Http } from '@angular/http';
+// import { map } from 'rxjs/operators';
+// import { Observable } from 'rxjs';
+// import { HttpClient } from '@angular/common/http';
 // import myData from '../../assets/python/file/trip_word20200105134717.json';
 
 @Component({
@@ -32,7 +32,7 @@ export class CategoryMenuListPage implements OnInit {
     }
   ]
 
-  constructor(private http: Http ) { }
+  constructor() { }
 
   ngOnInit() {
     
