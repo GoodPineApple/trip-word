@@ -12,16 +12,19 @@ const routes: Routes = [
         children: [
           {
             path: 'menu-list',
+            pathMatch: 'full',
             loadChildren: () =>
               import('../page/mycard/mycard-menu-list/mycard-menu-list.module').then(m => m.MycardMenuListPageModule)
           },
           {
             path: 'word-list',
+            pathMatch: 'full',
             loadChildren: () =>
               import('../page/mycard/mycard-word-list/mycard-word-list.module').then(m => m.MycardWordListPageModule)
           },
           {
             path: 'word-view',
+            pathMatch: 'full',
             loadChildren: () =>
               import('../page/mycard/mycard-word-view/mycard-word-view.module').then(m => m.MycardWordViewPageModule)
           },
