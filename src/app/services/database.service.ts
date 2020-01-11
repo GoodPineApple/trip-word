@@ -21,7 +21,7 @@ export interface Word {
   chinese: string,
   pronun_ch: string,
   pronun_kr: string,
-  is_my_card: string
+  is_my_word: string
 }
  
 @Injectable({
@@ -104,7 +104,7 @@ export class DatabaseService {
             chinese: data.rows.item(i).chinese,
             pronun_ch: data.rows.item(i).pronun_ch,
             pronun_kr: data.rows.item(i).pronun_kr,
-            is_my_card: data.rows.item(i).is_my_card
+            is_my_word: data.rows.item(i).is_my_word
            });
         }
       }
@@ -114,18 +114,17 @@ export class DatabaseService {
 
   getWord(word_id): Promise<Word> {
     return this.database.executeSql('SELECT word_id, menu_code, menu_name, korean, chinese, pronun_ch, pronun_kr, is_my_word FROM word WHERE word_id LIKE ?', [word_id]).then(data => {
-      let word: Word;
       
-      word.word_id =  data.rows.item(0).word_id,
-      word.menu_code = data.rows.item(0).menu_code,
-      word.menu_name = data.rows.item(0).menu_name,
-      word.korean = data.rows.item(0).korean,
-      word.chinese = data.rows.item(0).chinese,
-      word.pronun_ch = data.rows.item(0).pronun_ch,
-      word.pronun_kr = data.rows.item(0).pronun_kr,
-      word.is_my_card = data.rows.item(0).is_my_card
-           
-      return word;
+      return {
+        word_id :  data.rows.item(0).word_id,
+        menu_code : data.rows.item(0).menu_code,
+        menu_name : data.rows.item(0).menu_name,
+        korean : data.rows.item(0).korean,
+        chinese : data.rows.item(0).chinese,
+        pronun_ch : data.rows.item(0).pronun_ch,
+        pronun_kr : data.rows.item(0).pronun_kr,
+        is_my_word : data.rows.item(0).is_my_word
+      };
     });
   }
  
@@ -143,7 +142,7 @@ export class DatabaseService {
   //           chinese: data.rows.item(i).chinese,
   //           pronun_ch: data.rows.item(i).pronun_ch,
   //           pronun_kr: data.rows.item(i).pronun_kr,
-  //           is_my_card: data.rows.item(i).is_my_card
+  //           is_my_word: data.rows.item(i).is_my_word
   //          });
   //       }
   //     }
@@ -151,11 +150,9 @@ export class DatabaseService {
   //   });
   // }
   
-  // updateWord(word_id: string, is_my_card: string) {
-  //   let data = [dev.name, JSON.stringify(dev.skills), dev.img];
-  //   return this.database.executeSql(`UPDATE developer SET name = ?, skills = ?, img = ? WHERE id = ${dev.id}`, data).then(data => {
-  //     this.loadDevelopers();
-  //   })
-  // }
+  updateWord(word_id: string, is_my_word: string) {
+    return this.database.executeSql(`UPDATE word SET is_my_word = ${is_my_word} WHERE word_id = ${word_id}`).then(data => {
+    })
+  }
   
 }

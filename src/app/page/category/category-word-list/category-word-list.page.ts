@@ -62,6 +62,8 @@ export class CategoryWordListPage implements OnInit {
       if (rdy) {
         this.db.getWords(this.menu_code).then(word_list => {
           this.word_list = word_list;
+          alert('is_my_word : ' + word_list[0].is_my_word);
+          alert('word_id : ' + word_list[0].word_id);
         })
         // this.products = this.db.getProducts();
       }
@@ -81,5 +83,17 @@ export class CategoryWordListPage implements OnInit {
       }
     };
     this.router.navigate(['tabs/category/word-view'], navigationExtras);
+  }
+
+  
+  toggleIsMycard(word_id: string, is_my_word: string){
+    alert(word_id);
+    alert(is_my_word);
+    
+    // this.db.updateWord(word_id, is_my_word).then(word => {
+    //   this.word_view = word;
+    //   alert(word.korean);
+    //   alert(this.word_view.korean);
+    // })
   }
 }

@@ -10,10 +10,10 @@
 <ion-content>
   <ion-list >
     <ion-item *ngFor="let word of word_list">
-      <ion-toggle color="danger"></ion-toggle>
+      <ion-toggle  (ionChange)="toggleIsMycard(word.word_id, word.is_my_word)"  color="danger"></ion-toggle>
         <ion-label (click)="goWordView(word.word_id)">{{word.korean}}</ion-label>
         <ion-label (click)="goWordView(word.word_id)">{{word.pronun_ch}}</ion-label>
-        <ion-label (click)="goWordView(word.word_id)">{{word.chinese}}</ion-label> 
+        <ion-label (click)="goWordView(word.word_id)">{{word.chinese}} {{word.is_my_word}}</ion-label> 
     </ion-item>
   </ion-list>
 </ion-content>

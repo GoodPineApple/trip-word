@@ -10,8 +10,8 @@ import { DatabaseService, Word } from 'src/app/services/database.service';
 })
 export class CategoryWordViewPage implements OnInit {
 
-  word_id: string;
-  word_view: Word;
+  word_id: string = '';
+  word_view2: Word = null;
 
   // word_view : Object = {
   //   "id": "1",
@@ -40,7 +40,7 @@ export class CategoryWordViewPage implements OnInit {
     this.db.getDatabaseState().subscribe(rdy => {
       if (rdy) {
         this.db.getWord(this.word_id).then(word => {
-          this.word_view = word;
+          this.word_view2 = word;
         })
         // this.products = this.db.getProducts();
       }
@@ -53,4 +53,10 @@ export class CategoryWordViewPage implements OnInit {
     this._location.back();
   }
 
+  toggleIsMycard(word_id: string, is_my_word: string){
+    alert(word_id);
+    alert(is_my_word);
+    
+    this.db.updateWord(word_id, is_my_word)
+  }
 }
