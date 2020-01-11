@@ -1,9 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>mycardMenuList</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header></ion-header>
 
-<ion-content>
+<ion-content center text-center *ngIf="menu_list.length == 0">
+  <div class="center-wraper">
+    
+      <ion-icon class="center-target font-size-5-0" name="add-circle" color="primary" (click)="goCategory()"></ion-icon>
+    
+  </div>
+</ion-content>
 
+<ion-content *ngIf="menu_list.length != 0">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let menu of menu_list">
+        <ion-card (click)="goMenu(menu.menu_code)">
+          <img src="{{menu.menu_url}}"/>
+          <ion-card-header>  
+            <ion-card-subtitle>{{menu.menu_name}} </ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

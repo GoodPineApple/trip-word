@@ -1,5 +1,7 @@
 {
   "name": "trip_word",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

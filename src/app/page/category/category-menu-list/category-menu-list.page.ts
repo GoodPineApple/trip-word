@@ -1,5 +1,6 @@
-import { Component, Input, Output, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
+import { DatabaseService, Menu } from 'src/app/services/database.service';
 // import { Http } from '@angular/http';
 // import { map } from 'rxjs/operators';
 // import { Observable } from 'rxjs';
@@ -13,47 +14,53 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class CategoryMenuListPage implements OnInit {
 
+  menu_list: Menu[] = [];
 
-  category_list : Object[] = [
-    {
-      category_name : "음식",
-      category_code : "FOOD",
-      category_url : "assets/img/category/test.jpg"
-    },
-    {
-      category_name : "여행",
-      category_code : "TRAV",
-      category_url : "assets/img/category/test.jpg"
-    },
-    {
-      category_name : "가",
-      category_code : "GA",
-      category_url : "assets/img/category/test.jpg"
-    },
-    {
-      category_name : "나",
-      category_code : "Na",
-      category_url : "assets/img/category/test.jpg"
-    }
-  ]
+  // menu_list : Object[] = [
+  //   {
+  //     menu_name : "음식",
+  //     menu_code : "FOOD",
+  //     menu_url : "assets/img/menu/test.jpg"
+  //   },
+  //   {
+  //     menu_name : "여행",
+  //     menu_code : "TRAV",
+  //     menu_url : "assets/img/menu/test.jpg"
+  //   },
+  //   {
+  //     menu_name : "가",
+  //     menu_code : "GA",
+  //     menu_url : "assets/img/menu/test.jpg"
+  //   },
+  //   {
+  //     menu_name : "나",
+  //     menu_code : "Na",
+  //     menu_url : "assets/img/menu/test.jpg"
+  //   }
+  // ]
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router
+    ,private db: DatabaseService
+  ) { 
 
-  ngOnInit() {
-    
   }
 
-  goCategory(category_code){
-    alert(category_code);
+  ngOnInit() {
+    this.db.getDatabaseState().subscribe(rdy => {
+      if (rdy) {
+        this.db.getMenus().subscribe(menus => {
+          this.menu_list = menus;
+        })
+        // this.products = this.db.getProducts();
+      }
+    });
+  }
 
-    // location.href="/tabs/category/word-list/"+category_code;
-
-    // let url:string="/tabs/category/word-list/"+category_code;
-    // this.router.navigate([url], {state: {}});
-
+  goMenu(menu_code){
     let navigationExtras: NavigationExtras = {
       state: {
-        category_code: category_code
+        menu_code: menu_code
       }
     };
     this.router.navigate(['tabs/category/word-list'], navigationExtras);

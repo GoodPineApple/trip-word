@@ -9,13 +9,13 @@ import {Location} from '@angular/common';
 })
 export class CategoryWordListPage implements OnInit {
 
-  category_code: string;
+  menu_code: string;
  
   word_list : Object[] = [
     {
       "id": "1",
-			"category_code": "BASIC",
-			"category_name": "기초회화",
+			"menu_code": "BASIC",
+			"menu_name": "기초회화",
 			"korean": "나",
 			"chinese": "我",
 			"pronun_ch": "Wǒ",
@@ -23,8 +23,8 @@ export class CategoryWordListPage implements OnInit {
     },
     {
       "id": "2",
-			"category_code": "BASIC",
-			"category_name": "기초회화",
+			"menu_code": "BASIC",
+			"menu_name": "기초회화",
 			"korean": "너",
 			"chinese": "你",
 			"pronun_ch": "Nǐ",
@@ -32,8 +32,8 @@ export class CategoryWordListPage implements OnInit {
     },
     {
       "id": "3",
-			"category_code": "BASIC",
-			"category_name": "기초회화",
+			"menu_code": "BASIC",
+			"menu_name": "기초회화",
 			"korean": "우리",
 			"chinese": "我们",
 			"pronun_ch": "Wǒmen",
@@ -48,7 +48,7 @@ export class CategoryWordListPage implements OnInit {
   ) {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
-        this.category_code = this.router.getCurrentNavigation().extras.state.category_code;
+        this.menu_code = this.router.getCurrentNavigation().extras.state.menu_code;
       }
     });
   }
@@ -64,7 +64,7 @@ export class CategoryWordListPage implements OnInit {
     alert(word_id)
     let navigationExtras: NavigationExtras = {
       state: {
-        category_code: this.category_code,
+        menu_code: this.menu_code,
         word_id: word_id
       }
     };
