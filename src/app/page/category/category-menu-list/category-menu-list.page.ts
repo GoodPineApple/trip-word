@@ -40,8 +40,8 @@ export class CategoryMenuListPage implements OnInit {
   // ]
 
   constructor(
-    private router: Router
-    ,private db: DatabaseService
+    private router: Router,
+    private db: DatabaseService
   ) { 
 
   }

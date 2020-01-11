@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {Location} from '@angular/common';
+import { DatabaseService, Word } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-category-word-view',
@@ -10,22 +11,24 @@ import {Location} from '@angular/common';
 export class CategoryWordViewPage implements OnInit {
 
   word_id: string;
+  word_view: Word;
 
-  word_view : Object = {
-    "id": "1",
-    "category_code": "BASIC",
-    "category_name": "기초회화",
-    "korean": "나",
-    "chinese": "我",
-    "pronun_ch": "Wǒ",
-    "pronun_kr": "워"
-  }
+  // word_view : Object = {
+  //   "id": "1",
+  //   "category_code": "BASIC",
+  //   "category_name": "기초회화",
+  //   "korean": "나",
+  //   "chinese": "我",
+  //   "pronun_ch": "Wǒ",
+  //   "pronun_kr": "워"
+  // }
   
 
   constructor(
     private route: ActivatedRoute, 
     private router: Router, 
-    private _location: Location
+    private _location: Location,
+    private db: DatabaseService
   ) {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
@@ -34,6 +37,14 @@ export class CategoryWordViewPage implements OnInit {
     });
   }
   ngOnInit() {
+    this.db.getDatabaseState().subscribe(rdy => {
+      if (rdy) {
+        this.db.getWord(this.word_id).then(word => {
+          this.word_view = word;
+        })
+        // this.products = this.db.getProducts();
+      }
+    });
   }
 
 
