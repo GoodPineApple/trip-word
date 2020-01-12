@@ -29,7 +29,7 @@ export class MycardMenuListPage implements OnInit {
   ngOnInit() {
     this.db.getDatabaseState().subscribe(rdy => {
       if (rdy) {
-        this.db.getMycardMenus().then(menus => {
+        this.db.getMycardMenus().subscribe(menus => {
           this.menu_list = menus;
         })
         // this.products = this.db.getProducts();

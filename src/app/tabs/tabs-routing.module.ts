@@ -17,13 +17,13 @@ const routes: Routes = [
               import('../page/mycard/mycard-menu-list/mycard-menu-list.module').then(m => m.MycardMenuListPageModule)
           },
           {
-            path: 'word-list',
+            path: 'word-list/:menu-code',
             pathMatch: 'full',
             loadChildren: () =>
               import('../page/mycard/mycard-word-list/mycard-word-list.module').then(m => m.MycardWordListPageModule)
           },
           {
-            path: 'word-view',
+            path: 'word-view/:word-id',
             pathMatch: 'full',
             loadChildren: () =>
               import('../page/mycard/mycard-word-view/mycard-word-view.module').then(m => m.MycardWordViewPageModule)
@@ -44,12 +44,12 @@ const routes: Routes = [
               import('../page/category/category-menu-list/category-menu-list.module').then(m => m.CategoryMenuListPageModule)
           },
           {
-            path: 'word-list',
+            path: 'word-list/:menu-code',
             loadChildren: () =>
               import('../page/category/category-word-list/category-word-list.module').then(m => m.CategoryWordListPageModule)
           },
           {
-            path: 'word-view',
+            path: 'word-view/:word-id',
             loadChildren: () =>
               import('../page/category/category-word-view/category-word-view.module').then(m => m.CategoryWordViewPageModule)
           },

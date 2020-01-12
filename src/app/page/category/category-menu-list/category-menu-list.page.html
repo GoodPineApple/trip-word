@@ -3,7 +3,7 @@
   <ion-grid class="ion-margin-top">
     <ion-row>
       <ion-col class="ion-no-margin" size="4" *ngFor="let menu of menu_list">
-        <ion-card class="ion-no-margin" (click)="goMenu(menu.menu_code)">
+        <ion-card class="ion-no-margin" [routerLink]="['/', 'tabs', 'category', 'word-list', menu.menu_code]">
           <img src="{{menu.menu_img}}"/>
           <ion-card-header>  
             <ion-card-subtitle>{{menu.menu_name}} </ion-card-subtitle>

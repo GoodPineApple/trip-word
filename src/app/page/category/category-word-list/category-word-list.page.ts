@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router,  NavigationExtras } from '@angular/router';
 import {Location} from '@angular/common';
 import { DatabaseService, Word, Menu } from 'src/app/services/database.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-category-word-list',
@@ -9,7 +10,6 @@ import { DatabaseService, Word, Menu } from 'src/app/services/database.service';
   styleUrls: ['./category-word-list.page.scss'],
 })
 export class CategoryWordListPage implements OnInit {
-
   menu_code: string;
   menu_view: Menu;
   word_list: Word[] = [];
@@ -48,25 +48,22 @@ export class CategoryWordListPage implements OnInit {
     private route: ActivatedRoute, 
     private router: Router, 
     private _location: Location,
-    private db: DatabaseService
-  ) {
-    this.route.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation().extras.state) {
-        this.menu_code = this.router.getCurrentNavigation().extras.state.menu_code;
-      }
-    });
-  }
+    private db: DatabaseService,
+    private toast: ToastController
+  ) {}
  
   ngOnInit() {
-    this.db.getDatabaseState().subscribe(rdy => {
-      if (rdy) {
-        this.db.getWords(this.menu_code).then(word_list => {
-          this.word_list = word_list;
-          alert('is_my_word : ' + word_list[0].is_my_word);
-          alert('word_id : ' + word_list[0].word_id);
-        })
-        // this.products = this.db.getProducts();
-      }
+    this.route.paramMap.subscribe(params => {
+      let menu_code = params.get('menu-code');
+      this.menu_code = menu_code;
+      this.db.getDatabaseState().subscribe(rdy => {
+        if (rdy) {
+          this.db.getWords(menu_code).then(word_list => {
+            this.word_list = word_list;
+          })
+          // this.products = this.db.getProducts();
+        }
+      });
     });
   }
 
@@ -74,23 +71,27 @@ export class CategoryWordListPage implements OnInit {
     this._location.back();
   }
 
-  goWordView(word_id){
-    alert(word_id);
-    let navigationExtras: NavigationExtras = {
-      state: {
-        // menu_code: this.menu_code,
-        // word_id: word_id
-        menu_code: "BASIC",
-        word_id: "1"
-      }
-    };
-    this.router.navigate(['tabs/category/word-view'], navigationExtras);
-  }
+  // goWordView(word_id){
+  //   alert(word_id);
+  //   let navigationExtras: NavigationExtras = {
+  //     state: {
+  //       // menu_code: this.menu_code,
+  //       // word_id: word_id
+  //       menu_code: "BASIC",
+  //       word_id: "1"
+  //     }
+  //   };
+  //   this.router.navigate(['tabs/category/word-view'], navigationExtras);
+  // }
 
   toggleIsMycard(word_id: string){
-    alert(word_id);
-    
-    let result = this.db.updateWord(word_id);
-    alert(Object.keys(result))
+    console.log("toggleIsMycard : " + word_id)
+    this.db.updateWord(word_id).then(async (res) => {
+      let toast = await this.toast.create({
+        message: 'updated',
+        duration: 3000
+      });
+      toast.present();
+    });
   }
 }

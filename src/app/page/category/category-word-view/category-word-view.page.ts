@@ -10,7 +10,7 @@ import { DatabaseService, Word } from 'src/app/services/database.service';
 })
 export class CategoryWordViewPage implements OnInit {
 
-  word_id: string = '';
+  // word_id: string = '';
   word_view2: Word = null;
 
   // word_view : Object = {
@@ -26,24 +26,21 @@ export class CategoryWordViewPage implements OnInit {
 
   constructor(
     private route: ActivatedRoute, 
-    private router: Router, 
     private _location: Location,
     private db: DatabaseService
-  ) {
-    this.route.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation().extras.state) {
-        this.word_id = this.router.getCurrentNavigation().extras.state.word_id;
-      }
-    });
-  }
+  ) {}
   ngOnInit() {
-    this.db.getDatabaseState().subscribe(rdy => {
-      if (rdy) {
-        this.db.getWord(this.word_id).then(word => {
-          this.word_view2 = word;
-        })
-        // this.products = this.db.getProducts();
-      }
+    this.route.paramMap.subscribe(params => {
+      let word_id = params.get('word-id');
+
+      this.db.getDatabaseState().subscribe(rdy => {
+        if (rdy) {
+          this.db.getWord(word_id).then(word => {
+            this.word_view2 = word;
+          })
+          // this.products = this.db.getProducts();
+        }
+      });
     });
   }
 

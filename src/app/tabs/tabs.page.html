@@ -1,12 +1,12 @@
 <ion-tabs>
 
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="mycard">
+    <ion-tab-button tab="mycard" [routerLink]="['/', 'tabs', 'mycard', 'menu-list']">
       <ion-icon name="happy"></ion-icon>
       <ion-label>My Card</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="category">
+    <ion-tab-button tab="category" [routerLink]="['/', 'tabs', 'category', 'menu-list']">
       <ion-icon name="folder-open"></ion-icon>
       <ion-label>Category</ion-label>
     </ion-tab-button>
