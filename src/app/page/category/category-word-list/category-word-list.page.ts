@@ -78,22 +78,19 @@ export class CategoryWordListPage implements OnInit {
     alert(word_id);
     let navigationExtras: NavigationExtras = {
       state: {
-        menu_code: this.menu_code,
-        word_id: word_id
+        // menu_code: this.menu_code,
+        // word_id: word_id
+        menu_code: "BASIC",
+        word_id: "1"
       }
     };
     this.router.navigate(['tabs/category/word-view'], navigationExtras);
   }
 
-  
-  toggleIsMycard(word_id: string, is_my_word: string){
+  toggleIsMycard(word_id: string){
     alert(word_id);
-    alert(is_my_word);
     
-    // this.db.updateWord(word_id, is_my_word).then(word => {
-    //   this.word_view = word;
-    //   alert(word.korean);
-    //   alert(this.word_view.korean);
-    // })
+    let result = this.db.updateWord(word_id);
+    alert(Object.keys(result))
   }
 }

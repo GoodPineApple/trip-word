@@ -13,7 +13,7 @@
     <ion-row>
       <ion-col size="4" *ngFor="let menu of menu_list">
         <ion-card (click)="goMenu(menu.menu_code)">
-          <img src="{{menu.menu_url}}"/>
+          <img src="{{menu.menu_img}}"/>
           <ion-card-header>  
             <ion-card-subtitle>{{menu.menu_name}} </ion-card-subtitle>
           </ion-card-header>

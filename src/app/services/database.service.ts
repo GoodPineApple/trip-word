@@ -112,6 +112,26 @@ export class DatabaseService {
     });
   }
 
+  getMycardMenus(): Promise<Menu[]> {
+    return this.database.executeSql('SELECT * FROM menu where menu_code in (SELECT distinct menu_code FROM word WHERE is_my_word LIKE "Y")',[]).then(data => {
+      let menus: Menu[] = [];
+ 
+      if (data.rows.length > 0) {
+        for (var i = 0; i < data.rows.length; i++) {
+          menus.push({ 
+          	menu_id: data.rows.item(i).menu_id,
+            menu_code: data.rows.item(i).menu_code,
+            menu_name: data.rows.item(i).menu_name,
+            menu_color: data.rows.item(i).menu_color,
+            menu_img: data.rows.item(i).menu_img
+           });
+        }
+      }
+      console.log("getMycardMenus Result : " + menus)
+      return menus;
+    });
+  }
+
   getWord(word_id): Promise<Word> {
     return this.database.executeSql('SELECT word_id, menu_code, menu_name, korean, chinese, pronun_ch, pronun_kr, is_my_word FROM word WHERE word_id LIKE ?', [word_id]).then(data => {
       
@@ -128,6 +148,7 @@ export class DatabaseService {
     });
   }
  
+
   // loadWords() {
   //   let query = 'SELECT word_id, menu_code, menu_name, korean, chinese, pronun_ch, pronun_kr, is_my_word FROM word';
   //   return this.database.executeSql(query, []).then(data => {
@@ -150,8 +171,18 @@ export class DatabaseService {
   //   });
   // }
   
-  updateWord(word_id: string, is_my_word: string) {
-    return this.database.executeSql(`UPDATE word SET is_my_word = ${is_my_word} WHERE word_id = ${word_id}`).then(data => {
+  updateWord(word_id: string): Promise<string>  {
+    // return this.database.executeSql(`UPDATE word SET is_my_word = "Y" WHERE word_id = "1"`,[]).then(data => {
+    //   return data
+    // })
+    return this.database.executeSql('SELECT word_id, is_my_word FROM word WHERE word_id LIKE ?', [word_id]).then(data => {
+      var word_id = data.rows.item(0).word_id;
+      var is_my_word = data.rows.item(0).is_my_word
+      if(is_my_word == "Y") is_my_word = "N"
+      if(is_my_word == "N") is_my_word = "Y"
+      return this.database.executeSql(`UPDATE word SET is_my_word = ${is_my_word} WHERE word_id = ${word_id}`).then(data => {
+        return data
+      })
     })
   }
   

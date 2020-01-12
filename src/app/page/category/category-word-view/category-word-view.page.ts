@@ -53,10 +53,10 @@ export class CategoryWordViewPage implements OnInit {
     this._location.back();
   }
 
-  toggleIsMycard(word_id: string, is_my_word: string){
+  toggleIsMycard(word_id: string){
     alert(word_id);
-    alert(is_my_word);
     
-    this.db.updateWord(word_id, is_my_word)
+    let result = this.db.updateWord(word_id);
+    alert(Object.keys(result))
   }
 }
