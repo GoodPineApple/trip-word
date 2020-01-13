@@ -1,11 +1,27 @@
 <ion-header></ion-header>
 
 <ion-content center text-center *ngIf="menu_list.length == 0">
-  <div class="center-wraper">
-    
+  <!-- <div class="center-wraper">
+    <ion-icon class="center-target font-size-5-0" name="add-circle" color="primary" (click)="goCategory()"></ion-icon>
+  </div> -->
+
+  <!-- <div class="row">
+    <div class="col">
       <ion-icon class="center-target font-size-5-0" name="add-circle" color="primary" (click)="goCategory()"></ion-icon>
-    
-  </div>
+    </div>
+  </div> -->
+
+
+  <ion-grid style="height: 100%">
+    <ion-row justify-content-center align-items-center style="height: 100%; flex-direction: column">
+      <div text-center>
+        <ion-icon class="center-target font-size-5-0" name="add-circle" color="primary" (click)="goCategory()"></ion-icon>
+      </div>
+    </ion-row>
+  </ion-grid>
+
+
+
 </ion-content>
 
 <ion-content *ngIf="menu_list.length != 0">
