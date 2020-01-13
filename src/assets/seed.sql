@@ -1,12 +1,12 @@
 CREATE TABLE IF NOT EXISTS menu(menu_id INTEGER PRIMARY KEY AUTOINCREMENT, menu_code TEXT, menu_name TEXT, menu_color TEXT, menu_img TEXT);
 CREATE TABLE IF NOT EXISTS word(word_id INTEGER PRIMARY KEY AUTOINCREMENT, menu_code INTEGER, menu_name TEXT, korean TEXT, chinese TEXT, pronun_ch TEXT, pronun_kr TEXT, is_my_word TEXT);
 INSERT or IGNORE INTO menu VALUES (1, 'BASIC', '기초회화', '#fff000', '/asset/img/category/basic.png');
-INSERT or IGNORE INTO menu VALUES (2, 'NUMTIME', '숫자/날짜', '#fff001', '/asset/img/category/basic.png');
-INSERT or IGNORE INTO menu VALUES (3, 'TRAFFIC', '교통', '#fff002', '/asset/img/category/basic.png');
-INSERT or IGNORE INTO menu VALUES (4, 'SHOPPING', '쇼핑', '#fff003', '/asset/img/category/basic.png');
-INSERT or IGNORE INTO menu VALUES (5, 'RESTAURANT', '식당', '#fff004', '/asset/img/category/basic.png');
-INSERT or IGNORE INTO menu VALUES (6, 'HOTEL', '호텔', '#fff005', '/asset/img/category/basic.png');
-INSERT or IGNORE INTO menu VALUES (7, 'EMERGENCY', '비상시', '#fff006', '/asset/img/category/basic.png');
+INSERT or IGNORE INTO menu VALUES (2, 'NUMTIME', '숫자/날짜', '#fff001', '/asset/img/category/numtime.png');
+INSERT or IGNORE INTO menu VALUES (3, 'TRAFFIC', '교통', '#fff002', '/asset/img/category/traffic.png');
+INSERT or IGNORE INTO menu VALUES (4, 'SHOPPING', '쇼핑', '#fff003', '/asset/img/category/shopping.png');
+INSERT or IGNORE INTO menu VALUES (5, 'RESTAURANT', '식당', '#fff004', '/asset/img/category/restaurant.png');
+INSERT or IGNORE INTO menu VALUES (6, 'HOTEL', '호텔', '#fff005', '/asset/img/category/hotel.png');
+INSERT or IGNORE INTO menu VALUES (7, 'EMERGENCY', '비상시', '#fff006', '/asset/img/category/emergency.png');
 INSERT or IGNORE INTO word VALUES (1, 'BASIC', '기초회화', '나', '我', 'Wǒ', '워', 'N');
 INSERT or IGNORE INTO word VALUES (2, 'BASIC', '기초회화', '너', '你', 'Nǐ', '니', 'N');
 INSERT or IGNORE INTO word VALUES (3, 'BASIC', '기초회화', '우리', '我们', 'Wǒmen', '워먼', 'N');
