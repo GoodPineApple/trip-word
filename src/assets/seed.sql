@@ -7,6 +7,7 @@ INSERT or IGNORE INTO menu VALUES (4, 'SHOPPING', '쇼핑', '#fff003', '/assets/
 INSERT or IGNORE INTO menu VALUES (5, 'RESTAURANT', '식당', '#fff004', '/assets/img/category/restaurant.png');
 INSERT or IGNORE INTO menu VALUES (6, 'HOTEL', '호텔', '#fff005', '/assets/img/category/hotel.png');
 INSERT or IGNORE INTO menu VALUES (7, 'EMERGENCY', '비상시', '#fff006', '/assets/img/category/emergency.png');
+INSERT or IGNORE INTO menu VALUES (8, 'TOURSPOT', '관광지', '#fff007', '/assets/img/category/tourspot.png');
 INSERT or IGNORE INTO word VALUES (1, 'BASIC', '기초회화', '나', '我', 'Wǒ', '워', 'N');
 INSERT or IGNORE INTO word VALUES (2, 'BASIC', '기초회화', '너', '你', 'Nǐ', '니', 'N');
 INSERT or IGNORE INTO word VALUES (3, 'BASIC', '기초회화', '우리', '我们', 'Wǒmen', '워먼', 'N');
@@ -29,9 +30,9 @@ INSERT or IGNORE INTO word VALUES (19, 'BASIC', '기초회화', '잘 모르겠�
 INSERT or IGNORE INTO word VALUES (20, 'BASIC', '기초회화', '잠깐만요.', '等等', 'Děng děng', '덩덩', 'N');
 INSERT or IGNORE INTO word VALUES (21, 'NUMTIME', '숫자/날짜', '0', '零', 'Líng', '링', 'N');
 INSERT or IGNORE INTO word VALUES (22, 'NUMTIME', '숫자/날짜', '1', '一', 'Yī', '이', 'N');
-INSERT or IGNORE INTO word VALUES (23, 'NUMTIME', '숫자/날짜', '2', '二', '(Èr)', '알', 'N');
-INSERT or IGNORE INTO word VALUES (24, 'NUMTIME', '숫자/날짜', '3', '三', '(Sān)', '싼', 'N');
-INSERT or IGNORE INTO word VALUES (25, 'NUMTIME', '숫자/날짜', '4', '四', 'Sì)', '쓰', 'N');
+INSERT or IGNORE INTO word VALUES (23, 'NUMTIME', '숫자/날짜', '2', '二', 'Èr', '알', 'N');
+INSERT or IGNORE INTO word VALUES (24, 'NUMTIME', '숫자/날짜', '3', '三', 'Sān', '싼', 'N');
+INSERT or IGNORE INTO word VALUES (25, 'NUMTIME', '숫자/날짜', '4', '四', 'Sì', '쓰', 'N');
 INSERT or IGNORE INTO word VALUES (26, 'NUMTIME', '숫자/날짜', '5', '五', 'Wǔ', '우', 'N');
 INSERT or IGNORE INTO word VALUES (27, 'NUMTIME', '숫자/날짜', '6', '六', 'Liù', '리어우', 'N');
 INSERT or IGNORE INTO word VALUES (28, 'NUMTIME', '숫자/날짜', '7', '七', 'Qī', '치', 'N');
@@ -104,11 +105,22 @@ INSERT or IGNORE INTO word VALUES (94, 'HOTEL', '호텔', '방을 바꿔주세�
 INSERT or IGNORE INTO word VALUES (95, 'HOTEL', '호텔', '체크아웃하겠습니다.', '请给我退房', 'Qǐng gěi wǒ tuì fáng', '칭게이워 투이팡', 'N');
 INSERT or IGNORE INTO word VALUES (96, 'HOTEL', '호텔', '체크인 부탁합니다.', '请给我开个房间', 'Qǐng gěi wǒ kāi gè fángjiān', '칭게이워 카이거 팡지엔', 'N');
 INSERT or IGNORE INTO word VALUES (97, 'HOTEL', '호텔', '예약했습니다.', '预约了', 'Yùyuēle', '위위에러', 'N');
-INSERT or IGNORE INTO word VALUES (98, 'EMERGENCY', '비상시', '길을 잃었습니다', '我迷路了', 'Wǒ mílùle', '워미루러', 'N');
-
-
--- CREATE TABLE IF NOT EXISTS menu(menu_id INTEGER PRIMARY KEY AUTOINCREMENT, menu_code TEXT, menu_name TEXT, menu_color TEXT, menu_img TEXT);
--- INSERT or IGNORE INTO menu VALUES (1, 'BASIC', '기본', '#fff000', '/assets/img/menu/basic.png');
-
--- CREATE TABLE IF NOT EXISTS word(word_id INTEGER PRIMARY KEY AUTOINCREMENT, menu_code INTEGER, menu_name TEXT, korean TEXT, chinese TEXT, pronun_ch TEXT, pronun_kr TEXT, is_my_word TEXT);
--- INSERT or IGNORE INTO word VALUES (1, 'BASIC', '기본', '나', '중국어', 'na', '나', 'N');
+INSERT or IGNORE INTO word VALUES (98, 'TOURSPOT', '관광지', '잔교공원', '栈桥公园', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (99, 'TOURSPOT', '관광지', '천주교당', '天主教堂', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (100, 'TOURSPOT', '관광지', '팔대관', '八大关风景区', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (101, 'TOURSPOT', '관광지', '노신공원', '鲁迅公园', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (102, 'TOURSPOT', '관광지', '소어산', '小鱼山公园', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (103, 'TOURSPOT', '관광지', '백화원', '百花苑', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (104, 'TOURSPOT', '관광지', '소청도', '小青岛公园', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (105, 'TOURSPOT', '관광지', '영빈관', '迎宾馆', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (106, 'TOURSPOT', '관광지', '신호산', '信号山公园', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (107, 'TOURSPOT', '관광지', '화석루', '花石楼', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (108, 'TOURSPOT', '관광지', '5.4광장', '五四廣場', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (109, 'TOURSPOT', '관광지', '양꼬치거리', '劈柴院', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (110, 'TOURSPOT', '관광지', '춘화루', '春和樓', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (111, 'TOURSPOT', '관광지', '중산로', '中山路', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (112, 'TOURSPOT', '관광지', '짝퉁시장', '卽墨路', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (113, 'TOURSPOT', '관광지', '타이동', '台东步行街', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (114, 'TOURSPOT', '관광지', '까르푸', '浮山所, 家乐福', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (115, 'TOURSPOT', '관광지', '맥주박물관', '青岛啤酒博物馆', '', '', 'N');
+INSERT or IGNORE INTO word VALUES (116, 'EMERGENCY', '비상시', '길을 잃었습니다', '我迷路了', 'Wǒ mílùle', '워미루러', 'N');

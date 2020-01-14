@@ -1,12 +1,4 @@
-BASIC,기초회화,#fff000,/asset/img/category/basic.png,
-NUMTIME,숫자/날짜,#fff001,/asset/img/category/numtime.png,
-TRAFFIC,교통,#fff002,/asset/img/category/traffic.png,
-SHOPPING,쇼핑,#fff003,/asset/img/category/shopping.png,
-RESTAURANT,식당,#fff004,/asset/img/category/restaurant.png,
-HOTEL,호텔,#fff005,/asset/img/category/hotel.png,
-EMERGENCY,비상시,#fff006,/asset/img/category/emergency.png,
-TOURSPOT,관광지,#fff007,/asset/img/category/tourspot.png,
-,,,,
+카테고리,한국뜻,중국어,중국발음,한국발음
 기초회화,나,我,Wǒ,워
 기초회화,너,你,Nǐ,니
 기초회화,우리,我们,Wǒmen,워먼
@@ -29,9 +21,9 @@ TOURSPOT,관광지,#fff007,/asset/img/category/tourspot.png,
 기초회화,잠깐만요.,等等,Děng děng,덩덩
 숫자/날짜,0,零,Líng,링
 숫자/날짜,1,一,Yī,이
-숫자/날짜,2,二,Èr,알
-숫자/날짜,3,三,Sān,싼
-숫자/날짜,4,四,Sì,쓰
+숫자/날짜,2,二,(Èr),알
+숫자/날짜,3,三,(Sān),싼
+숫자/날짜,4,四,Sì),쓰
 숫자/날짜,5,五,Wǔ,우
 숫자/날짜,6,六,Liù,리어우
 숫자/날짜,7,七,Qī,치
@@ -104,22 +96,4 @@ TOURSPOT,관광지,#fff007,/asset/img/category/tourspot.png,
 호텔,체크아웃하겠습니다.,请给我退房,Qǐng gěi wǒ tuì fáng,칭게이워 투이팡
 호텔,체크인 부탁합니다.,请给我开个房间,Qǐng gěi wǒ kāi gè fángjiān,칭게이워 카이거 팡지엔
 호텔,예약했습니다.,预约了,Yùyuēle,위위에러
-관광지,잔교공원,栈桥公园,,
-관광지,천주교당,天主教堂,,
-관광지,팔대관,八大关风景区,,
-관광지,노신공원,鲁迅公园,,
-관광지,소어산,小鱼山公园,,
-관광지,백화원,百花苑,,
-관광지,소청도,小青岛公园,,
-관광지,영빈관,迎宾馆,,
-관광지,신호산,信号山公园,,
-관광지,화석루,花石楼,,
-관광지,5.4광장,五四廣場,,
-관광지,양꼬치거리,劈柴院,,
-관광지,춘화루,春和樓,,
-관광지,중산로,中山路,,
-관광지,짝퉁시장,卽墨路,,
-관광지,타이동,台东步行街,,
-관광지,까르푸,"浮山所, 家乐福",,
-관광지,맥주박물관,青岛啤酒博物馆,,
 비상시,길을 잃었습니다,我迷路了,Wǒ mílùle,워미루러
