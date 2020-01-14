@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router,  NavigationExtras } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import {Location} from '@angular/common';
 import { DatabaseService, Word, Menu } from 'src/app/services/database.service';
 import { ToastController } from '@ionic/angular';
@@ -14,39 +14,8 @@ export class CategoryWordListPage implements OnInit {
   menu_view: Menu;
   word_list: Word[] = [];
  
-  // word_list : Object[] = [
-  //   {
-  //     "id": "1",
-	// 		"menu_code": "BASIC",
-	// 		"menu_name": "기초회화",
-	// 		"korean": "나",
-	// 		"chinese": "我",
-	// 		"pronun_ch": "Wǒ",
-	// 		"pronun_kr": "워"
-  //   },
-  //   {
-  //     "id": "2",
-	// 		"menu_code": "BASIC",
-	// 		"menu_name": "기초회화",
-	// 		"korean": "너",
-	// 		"chinese": "你",
-	// 		"pronun_ch": "Nǐ",
-	// 		"pronun_kr": "니"
-  //   },
-  //   {
-  //     "id": "3",
-	// 		"menu_code": "BASIC",
-	// 		"menu_name": "기초회화",
-	// 		"korean": "우리",
-	// 		"chinese": "我们",
-	// 		"pronun_ch": "Wǒmen",
-	// 		"pronun_kr": "워먼"
-  //   }
-  // ]
-
   constructor(
     private route: ActivatedRoute, 
-    private router: Router, 
     private _location: Location,
     private db: DatabaseService,
     private toast: ToastController
@@ -71,27 +40,32 @@ export class CategoryWordListPage implements OnInit {
     this._location.back();
   }
 
-  // goWordView(word_id){
-  //   alert(word_id);
-  //   let navigationExtras: NavigationExtras = {
-  //     state: {
-  //       // menu_code: this.menu_code,
-  //       // word_id: word_id
-  //       menu_code: "BASIC",
-  //       word_id: "1"
-  //     }
-  //   };
-  //   this.router.navigate(['tabs/category/word-view'], navigationExtras);
-  // }
-
   toggleIsMycard(word_id: string){
     console.log("toggleIsMycard : " + word_id)
     this.db.updateWord(word_id).then(async (res) => {
-      let toast = await this.toast.create({
-        message: 'updated',
-        duration: 3000
+      let messageArr: string[] = [
+        "정또은☆ 세상 행복하길",
+        "TJ ♥ SH 상화? 착해~~",
+        "JS ♥ EJ 결혼할 때 뭐 해줘야하지...",
+        "TM ♥ undefined ㅅㅂ",
+        "배고프다. 왜 이시간까지 이걸 하고 있지",
+        "뭐 먹을꺼니 태주야. 주말마다 조낸 처먹었다 진짜",
+        "잘 놀고 있니? 병신과 머저리들아...? 행복하지? 행복해야해!!!! 더 미쳐 놀아!!!!! 돌아오면 지옥이야",
+        "이거 쓰긴 쓰니????????????? 여행중국어 좋음. 강추쓰.",
+        "다른 앱 깐 건 아니지? 여행중국어 좋음",
+        "중국 기념품 사자! 모자 살거야??"
+      ];
+      var random = Math.floor(Math.random() * 10);
+      
+      await this.toast.create({
+        header: 'Trip-Word!!',
+        duration: 3000,
+        message: messageArr[random],
+        position: 'top',
+        showCloseButton: true
+      }).then( toast => {
+        toast.present();
       });
-      toast.present();
     });
   }
 }

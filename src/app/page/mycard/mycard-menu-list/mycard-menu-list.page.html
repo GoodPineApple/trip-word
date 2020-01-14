@@ -24,11 +24,11 @@
 
 </ion-content>
 
-<ion-content *ngIf="menu_list.length != 0">
+<ion-content *ngIf="menu_list.length != 0"  overflow-scroll="true">
   <ion-grid>
     <ion-row>
       <ion-col size="4" *ngFor="let menu of menu_list">
-        <ion-card (click)="goMenu(menu.menu_code)">
+        <ion-card [routerLink]="['/', 'tabs', 'mycard', 'word-list', menu.menu_code]">
           <img src="{{menu.menu_img}}"/>
           <ion-card-header>  
             <ion-card-subtitle>{{menu.menu_name}} </ion-card-subtitle>

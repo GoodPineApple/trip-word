@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>mycardWordList</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="backClicked()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{menu_code}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content overflow-scroll="true">
+  <ion-list >
+    <ion-item *ngFor="let word of word_list">
+      <ion-label [routerLink]="['/', 'tabs', 'mycard', 'word-view', word.word_id]">{{word.korean}}</ion-label>
+      <ion-label [routerLink]="['/', 'tabs', 'mycard', 'word-view', word.word_id]">{{word.pronun_ch}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

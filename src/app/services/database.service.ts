@@ -4,7 +4,8 @@ import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { HttpClient } from '@angular/common/http';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 import { BehaviorSubject, Observable } from 'rxjs';
- 
+import { _ } from "underscore"
+
 export interface Menu {
   menu_id: number,
   menu_code: string,
@@ -21,7 +22,8 @@ export interface Word {
   chinese: string,
   pronun_ch: string,
   pronun_kr: string,
-  is_my_word: string
+  is_my_word: string,
+  is_my_word_bool : boolean
 }
  
 @Injectable({
@@ -32,6 +34,7 @@ export class DatabaseService {
   private dbReady: BehaviorSubject<boolean> = new BehaviorSubject(false);
  
   mycard_menus = new BehaviorSubject([]);
+  mycard_words = new BehaviorSubject([]);
   menus = new BehaviorSubject([]);
   words = new BehaviorSubject([]);
  
@@ -56,6 +59,7 @@ export class DatabaseService {
           this.loadMenus();
           this.loadWords();
           this.loadMycardMenus();
+          this.loadMycardWords()
           this.dbReady.next(true);
         })
         .catch(e => console.error(e));
@@ -130,12 +134,35 @@ export class DatabaseService {
             chinese: data.rows.item(i).chinese,
             pronun_ch: data.rows.item(i).pronun_ch,
             pronun_kr: data.rows.item(i).pronun_kr,
-            is_my_word: data.rows.item(i).is_my_word
+            is_my_word: data.rows.item(i).is_my_word,
+            is_my_word_bool: data.rows.item(0).is_my_word == "Y" ? true : false
            });
         }
       }
-      console.log("words : " + words);
       this.words.next(words);
+    });
+  }
+
+  loadMycardWords() {
+    console.log("=============START loadMycardWords() =================");
+    return this.database.executeSql('SELECT * FROM word WHERE is_my_word LIKE "Y"', []).then(data => {
+      let mycard_words = [];
+      if (data.rows.length > 0) {
+        for (var i = 0; i < data.rows.length; i++) {
+          mycard_words.push({ 
+          	word_id: data.rows.item(i).word_id,
+            menu_code: data.rows.item(i).menu_code,
+            menu_name: data.rows.item(i).menu_name,
+            korean: data.rows.item(i).korean,
+            chinese: data.rows.item(i).chinese,
+            pronun_ch: data.rows.item(i).pronun_ch,
+            pronun_kr: data.rows.item(i).pronun_kr,
+            is_my_word: data.rows.item(i).is_my_word,
+            is_my_word_bool: data.rows.item(0).is_my_word == "Y" ? true : false
+           });
+        }
+      }
+      this.mycard_words.next(mycard_words);
     });
   }
 
@@ -152,16 +179,39 @@ export class DatabaseService {
             chinese: data.rows.item(i).chinese,
             pronun_ch: data.rows.item(i).pronun_ch,
             pronun_kr: data.rows.item(i).pronun_kr,
-            is_my_word: data.rows.item(i).is_my_word
+            is_my_word: data.rows.item(i).is_my_word,
+            is_my_word_bool: data.rows.item(i).is_my_word == "Y" ? true : false
            });
         }
       }
       return words;
     });
   }
-
+  
   getMycardMenus(): Observable<Menu[]> {
     return this.mycard_menus.asObservable();
+  }
+
+  getMycardWords(menu_code): Promise<Word[]> {
+    return this.database.executeSql('SELECT word_id, menu_code, menu_name, korean, chinese, pronun_ch, pronun_kr, is_my_word FROM word WHERE is_my_word = "Y" AND menu_code LIKE ?', [menu_code]).then(data => {
+      let words: Word[] = [];
+      if (data.rows.length > 0) {
+        for (var i = 0; i < data.rows.length; i++) {
+          words.push({
+          	word_id: data.rows.item(i).word_id,
+            menu_code: data.rows.item(i).menu_code,
+            menu_name: data.rows.item(i).menu_name,
+            korean: data.rows.item(i).korean,
+            chinese: data.rows.item(i).chinese,
+            pronun_ch: data.rows.item(i).pronun_ch,
+            pronun_kr: data.rows.item(i).pronun_kr,
+            is_my_word: data.rows.item(i).is_my_word,
+            is_my_word_bool: data.rows.item(i).is_my_word == "Y" ? true : false
+           });
+        }
+      }
+      return words;
+    });
   }
 
   getWord(word_id): Promise<Word> {
@@ -175,7 +225,8 @@ export class DatabaseService {
         chinese : data.rows.item(0).chinese,
         pronun_ch : data.rows.item(0).pronun_ch,
         pronun_kr : data.rows.item(0).pronun_kr,
-        is_my_word : data.rows.item(0).is_my_word
+        is_my_word : data.rows.item(0).is_my_word,
+        is_my_word_bool: data.rows.item(0).is_my_word == "Y" ? true : false
       };
     });
   }
@@ -186,22 +237,15 @@ export class DatabaseService {
     // })
     console.log("=============START UPDATEWORD() =================");
     return this.database.executeSql('SELECT word_id, is_my_word FROM word WHERE word_id LIKE ?', [word_id]).then(data => {
-      console.log("select data : " + data);
       var word_id = data.rows.item(0).word_id;
       var is_my_word = data.rows.item(0).is_my_word;
-
-      console.log("word_id : " + word_id);
-      console.log("is_my_word : " + is_my_word);
-
       if(is_my_word == "Y") is_my_word = "N"
       else is_my_word = "Y"
-
-      console.log("is_my_word changed : " + is_my_word);
       return this.database.executeSql('UPDATE word SET is_my_word = ? WHERE word_id = ?', [is_my_word, word_id]).then(data => {
         // return data
-        console.log("update exec : " + data);
         this.loadWords();
         this.loadMycardMenus();
+        this.loadMycardWords()
       }).catch(function (err) {
         console.error(err); // Error: Request is failed
       });

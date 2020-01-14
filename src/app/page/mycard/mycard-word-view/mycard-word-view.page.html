@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>mycardWordView</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="backClicked()"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{word_view2?.menu_name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content overflow-scroll="true">
+  
+  <ion-card class="ion-text-center">
+    <div class="img-wrapper" [style.background-image]="'url(assets/img/wide_qingdao.jpg)'"> 
+    </div>
+    <!-- <img src="assets/img/wide_qingdao.jpg" /> -->
+    <ion-card-content>  
+      <ion-card-title class="font-size-5-0"> {{word_view2?.korean}} </ion-card-title>
+      <ion-card-title class="font-size-9-0">{{word_view2?.chinese}} </ion-card-title>
+      <ion-card-subtitle class="font-size-3-0">{{word_view2?.pronun_ch}} </ion-card-subtitle>
+      <ion-card-subtitle class="font-size-3-0">{{word_view2?.pronun_kr}} </ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
