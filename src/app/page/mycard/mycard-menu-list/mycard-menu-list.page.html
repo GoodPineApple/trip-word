@@ -1,4 +1,4 @@
-<ion-header></ion-header>
+<ion-header [style.min-height]=""></ion-header>
 
 <ion-content center text-center *ngIf="menu_list.length == 0">
   <!-- <div class="center-wraper">
@@ -25,10 +25,10 @@
 </ion-content>
 
 <ion-content *ngIf="menu_list.length != 0"  overflow-scroll="true">
-  <ion-grid>
+  <ion-grid class="ion-margin-top">
     <ion-row>
-      <ion-col size="4" *ngFor="let menu of menu_list">
-        <ion-card [routerLink]="['/', 'tabs', 'mycard', 'word-list', menu.menu_code]">
+      <ion-col class="ion-no-margin" size="4" *ngFor="let menu of menu_list">
+        <ion-card class="ion-no-margin" [routerLink]="['/', 'tabs', 'mycard', 'word-list', menu.menu_code]">
           <img src="{{menu.menu_img}}"/>
           <ion-card-header>  
             <ion-card-subtitle>{{menu.menu_name}} </ion-card-subtitle>
