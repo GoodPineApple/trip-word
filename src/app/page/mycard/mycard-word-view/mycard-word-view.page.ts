@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {Location} from '@angular/common';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 import { DatabaseService, Word } from 'src/app/services/database.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class MycardWordViewPage implements OnInit {
   constructor(
     private route: ActivatedRoute, 
     private _location: Location,
-    private db: DatabaseService
+    private db: DatabaseService,
+    private tts: TextToSpeech
   ) {}
 
   ngOnInit() {
@@ -35,6 +37,15 @@ export class MycardWordViewPage implements OnInit {
 
   backClicked() {
     this._location.back();
+  }
+
+  speak(pronun_ch){
+    this.tts.speak({
+      text: pronun_ch,
+      locale: 'zh-CN',
+      rate: 0.75
+    }).then(() => console.log('Success'))
+      .catch((reason: any) => console.log(reason));
   }
 
 }

@@ -14,10 +14,10 @@
     </div>
     <!-- <img src="assets/img/wide_qingdao.jpg" /> -->
     <ion-card-content>  
-      <ion-card-title class="font-size-5-0"> {{word_view2?.korean}} </ion-card-title>
-      <ion-card-title class="font-size-9-0">{{word_view2?.chinese}} </ion-card-title>
-      <ion-card-subtitle class="font-size-3-0">{{word_view2?.pronun_ch}} </ion-card-subtitle>
-      <ion-card-subtitle class="font-size-3-0">{{word_view2?.pronun_kr}} </ion-card-subtitle>
+      <ion-card-title class="font-size-5-0" (click)="speak(word_view2?.korean)"> {{word_view2?.korean}} </ion-card-title>
+      <ion-card-title class="font-size-9-0" (click)="speak(word_view2?.chinese)">{{word_view2?.chinese}} </ion-card-title>
+      <ion-card-subtitle class="font-size-3-0" (click)="speak(word_view2?.pronun_ch)">{{word_view2?.pronun_ch}} </ion-card-subtitle>
+      <ion-card-subtitle class="font-size-3-0" (click)="speak(word_view2?.pronun_ch)">{{word_view2?.pronun_kr}} </ion-card-subtitle>
     </ion-card-content>
   </ion-card>
 </ion-content>

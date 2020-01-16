@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {Location} from '@angular/common';
 import { DatabaseService, Word } from 'src/app/services/database.service';
-// import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 import { ToastController } from '@ionic/angular';
 
 @Component({
@@ -18,14 +18,13 @@ export class CategoryWordViewPage implements OnInit {
     private route: ActivatedRoute, 
     private _location: Location,
     private db: DatabaseService,
-    // private tts: TextToSpeech,
+    private tts: TextToSpeech,
     private toast: ToastController
   ) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       let word_id = params.get('word-id');
-
       this.db.getDatabaseState().subscribe(rdy => {
         if (rdy) {
           this.db.getWord(word_id).then(word => {
@@ -42,11 +41,14 @@ export class CategoryWordViewPage implements OnInit {
   }
 
   speak(pronun_ch){
-    // this.tts.speak(pronun_ch)
-    //   .then(() => console.log('Success'))
-    //   .catch((reason: any) => console.log(reason));
+    this.tts.speak({
+      text: pronun_ch,
+      locale: 'zh-CN',
+      rate: 0.75
+    }).then(() => console.log('Success'))
+      .catch((reason: any) => console.log(reason));
   }
-  
+
   toggleIsMycard(word_id: string){
     console.log("toggleIsMycard : " + word_id)
     this.db.updateWord(word_id).then(async (res) => {
