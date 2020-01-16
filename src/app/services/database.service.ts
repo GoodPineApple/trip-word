@@ -254,6 +254,26 @@ export class DatabaseService {
     });
   }
 
-
+  searchWords(korean): Promise<Word[]> {
+    return this.database.executeSql('SELECT word_id, menu_code, menu_name, korean, chinese, pronun_ch, pronun_kr, is_my_word FROM word WHERE korean LIKE ?', ['%' + korean + '%']).then(data => {
+      let words: Word[] = [];
+      if (data.rows.length > 0) {
+        for (var i = 0; i < data.rows.length; i++) {
+          words.push({
+          	word_id: data.rows.item(i).word_id,
+            menu_code: data.rows.item(i).menu_code,
+            menu_name: data.rows.item(i).menu_name,
+            korean: data.rows.item(i).korean,
+            chinese: data.rows.item(i).chinese,
+            pronun_ch: data.rows.item(i).pronun_ch,
+            pronun_kr: data.rows.item(i).pronun_kr,
+            is_my_word: data.rows.item(i).is_my_word,
+            is_my_word_bool: data.rows.item(i).is_my_word == "Y" ? true : false
+           });
+        }
+      }
+      return words;
+    });
+  }
   
 }
