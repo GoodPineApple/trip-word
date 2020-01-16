@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 import { DatabaseService, Menu } from 'src/app/services/database.service';
+import { Platform } from '@ionic/angular';
 // import { Http } from '@angular/http';
 // import { map } from 'rxjs/operators';
 // import { Observable } from 'rxjs';
@@ -14,11 +15,13 @@ import { DatabaseService, Menu } from 'src/app/services/database.service';
 })
 export class CategoryMenuListPage implements OnInit {
 
+  backButtonSubscription;
   menu_list: Menu[] = [];
 
   constructor(
     private router: Router,
-    private db: DatabaseService
+    private db: DatabaseService,
+    private platform: Platform
   ) { }
 
   ngOnInit() {
@@ -29,6 +32,18 @@ export class CategoryMenuListPage implements OnInit {
         })
       }
     });
+  }
+
+  ngAfterViewInit() {
+    this.backButtonSubscription = this.platform.backButton.subscribe(() => {
+      if(confirm('exit?')){
+        navigator['app'].exitApp();
+      }
+    });
+  }
+
+  ngOnDestroy() { 
+    this.backButtonSubscription.unsubscribe();
   }
 
   // goMenu(menu_code){
