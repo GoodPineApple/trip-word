@@ -7,6 +7,14 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   // {
+  //   path: 'search-list',
+  //   loadChildren: () => import('./page/search/search-list/search-list.module').then( m => m.SearchListPageModule)
+  // },
+  // {
+  //   path: 'search',
+  //   loadChildren: () => import('./page/search/search.module').then( m => m.SearchPageModule)
+  // },
+  // {
   //   path: 'mycard-menu-list',
   //   loadChildren: () => import('./page/mycard/mycard-menu-list/mycard-menu-list.module').then( m => m.MycardMenuListPageModule)
   // },

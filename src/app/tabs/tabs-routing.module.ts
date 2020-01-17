@@ -61,15 +61,30 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'search',
         children: [
           {
-            path: '',
+            path: 'search-list',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../page/search/search-list/search-list.module').then(m => m.SearchListPageModule)
+          },
+          {
+            path: '',
+            redirectTo: '/tabs/search/search-list',
+            pathMatch: 'full'
           }
         ]
-      },
+      }
+      // {
+      //   path: 'tab3',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: () =>
+      //         import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+      //     }
+      //   ]
+      // },
       // {
       //   path: '',
       //   redirectTo: '/tabs/mycard/category-list',
