@@ -8,8 +8,8 @@
  
     <ion-item button *ngFor="let word of word_list">
 
-      <ion-label text-wrap [routerLink]="['/', 'tabs', 'mycard', 'word-view', word.word_id]">{{word.korean}}</ion-label>
-      <ion-label text-wrap [routerLink]="['/', 'tabs', 'mycard', 'word-view', word.word_id]">{{word.pronun_ch}}</ion-label>
+      <ion-label text-wrap [routerLink]="['/', 'tabs', 'category', 'word-view', word.word_id]">{{word.korean}}</ion-label>
+      <ion-label text-wrap [routerLink]="['/', 'tabs', 'category', 'word-view', word.word_id]">{{word.pronun_ch}}</ion-label>
  
     </ion-item>
  
