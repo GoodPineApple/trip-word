@@ -51,32 +51,29 @@ export class MycardMenuListPage implements OnInit, OnDestroy, AfterViewInit {
   }
 
   exitMyApp(){
-    let url = this.platform.url();
-    console.log('this.platform.url() :::::::::::::'+this.platform.url());
-    if(url.indexOf('/tabs/mycard/menu-list') > -1 || url.indexOf('/tabs/category/menu-list') > -1 || url.indexOf('/tabs/search/search-list') > -1){
-      console.log(this.platform.url());
-
       let that = this;
       this.backButtonSubscription = this.platform.backButton.subscribe(() => {
-        this.exit_cnt++;
-        if (this.exit_cnt === 1) {
-          this.toast.create({
-            header: 'Trip-Word!!',
-            duration: 2000,
-            message: '뒤로가기를 한번 더 누르면 종료됩니다.',
-            position: 'bottom',
-            showCloseButton: false
-          }).then( toast => {
-            toast.present();
-          });
-          setTimeout(function () {
-            that.exit_cnt = 0;
-          }, 2000);
-        } else if (this.exit_cnt === 2) {
-          navigator['app'].exitApp();
+        let url = this.platform.url();
+        if(url.indexOf('/tabs/mycard/menu-list') > -1 || url.indexOf('/tabs/category/menu-list') > -1 || url.indexOf('/tabs/search/search-list') > -1){
+          this.exit_cnt++;
+          if (this.exit_cnt === 1) {
+            this.toast.create({
+              header: 'Trip-Word!!',
+              duration: 2000,
+              message: '뒤로가기를 한번 더 누르면 종료됩니다.',
+              position: 'bottom',
+              showCloseButton: false
+            }).then( toast => {
+              toast.present();
+            });
+            setTimeout(function () {
+              that.exit_cnt = 0;
+            }, 1000);
+          } else if (this.exit_cnt === 2) {
+            navigator['app'].exitApp();
+          }
         }
       });
-    }
   }
 
 

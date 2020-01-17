@@ -34,17 +34,17 @@ export class CategoryMenuListPage implements OnInit {
     });
   }
 
-  ngAfterViewInit() {
-    this.backButtonSubscription = this.platform.backButton.subscribe(() => {
-      if(confirm('exit?')){
-        navigator['app'].exitApp();
-      }
-    });
-  }
+  // ngAfterViewInit() {
+  //   this.backButtonSubscription = this.platform.backButton.subscribe(() => {
+  //     if(confirm('exit?')){
+  //       navigator['app'].exitApp();
+  //     }
+  //   });
+  // }
 
-  ngOnDestroy() { 
-    this.backButtonSubscription.unsubscribe();
-  }
+  // ngOnDestroy() { 
+  //   this.backButtonSubscription.unsubscribe();
+  // }
 
   // goMenu(menu_code){
   //   let navigationExtras: NavigationExtras = {
