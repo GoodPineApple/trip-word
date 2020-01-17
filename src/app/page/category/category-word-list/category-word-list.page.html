@@ -12,7 +12,7 @@
     <ion-item *ngFor="let word of word_list">
       <ion-toggle [ngModel]="word?.is_my_word_bool" (ngModelChange)="toggleIsMycard(word.word_id)"  color="danger"></ion-toggle>
         <ion-label [routerLink]="['/', 'tabs', 'category', 'word-view', word.word_id]">{{word.korean}}</ion-label>
-        <ion-label [routerLink]="['/', 'tabs', 'category', 'word-view', word.word_id]">{{word.pronun_ch}}</ion-label>
+        <ion-label [routerLink]="['/', 'tabs', 'category', 'word-view', word.word_id]">{{word.chinese}}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
